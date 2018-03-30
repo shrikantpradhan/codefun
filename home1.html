@@ -18,13 +18,11 @@
     <div class="home-banner">
       
          <h1><u><spam style="color:gray">Code</spam><spam>Fun</spam></u></h1><br>
-         <span>Start learn a new way <b>programming languages with fun...</b></span>
-        <ul class="nav-right">
-          <li><a href="#">Sign in</a></li>
-          <li><a href="#">Sign up</a></li>
-        </ul>
+         <span>The most engaging game for learning programming.</span><br><br>
+         <a href="#" id="login-btn">GET STARTED</a>
+        
     </div>
-     <header>
+       <header>
             <div class="nav">
               <h1><spam style="color:gray">Code</spam><spam>Fun</spam></h1>
               <ul class="nav-left">
@@ -32,28 +30,46 @@
                 <li><a href="#">Course</a></li>
                 <li><a href="#">FAQ</a></li>
               </ul>
+              <ul class="nav-right">
+                <li><a href="#" >Sign in</a></li>
+                <li><a href="#">Sign up</a></li>
+              </ul>
             </div>
             <div class="divider"></div>
         </header>
 
-        <div class="model">
+        <div class="login-model">
           <div class="model-bg"></div>
           <div class="model-body">
               <span class="close-model">X</span>
           </div>   
         </div>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+       <footer>
+          <div class="footer-manu">
+
+          </div>
+          <div class="footer-ext">
+            <span>Copyright ©2018 CodeFun. All Rights Reseved.</span>
+            <h1><spam style="color:gray">Code</spam><spam>Fun</spam></h1>
+            <span>Need Help? <a href="">team@codefun.com</a> and we'll get in touch!</span>
+          </div>
+       </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-
+    <script>
+      $(document).ready(function(){
+       $(".login-model").hide();
+       $("#login-btn").click(function(){
+           $(".login-model").show();
+       });
+       $(".close-model").click(function(){
+           $(".login-model").hide();
+       });
+      });
+       </script>
     
   </body>
 </html>
