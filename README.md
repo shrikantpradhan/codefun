@@ -1,2 +1,2 @@
 # codefun
-It is used for beginner for programming
+It is used for beginner for Learn Programming skills with fun
