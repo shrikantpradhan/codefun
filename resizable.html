@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="stylecss.css">
+
+</head>
+
+<body>
+  <div class="container">
+      <div class="side-nav"></div>
+      <div id="parent">
+        <div id="div1"> 
+            <div class="header"></div>
+            <div class="info"></div>
+            <div class="codesection">
+              <p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p>
+              <p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p>
+              <p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p>
+              <p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p>
+              <p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p>
+              <p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p><p>dasdasdasdasdasdasd</p>
+    
+            </div>
+        </div>
+        <div id="div2"> My Data2</div>
+        
+      </div>    
+  </div>
+  
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#div1").resizable();
+      $('#div1').resize(function () {
+        $('#div2').width($("#parent").width() - $("#div1").width());
+      });
+      $(window).resize(function () {
+        $('#div2').width($("#parent").width() - $("#div1").width());
+        $('#div1').height($("#parent").height());
+      });
+    });
+
+
+  </script>
+</body>
+
+</html>

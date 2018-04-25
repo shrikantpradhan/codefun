@@ -1,0 +1,112 @@
+<html lang="en">
+    <head>
+      <meta name="google-signin-scope" content="profile email">
+      <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+     
+      <link rel="stylesheet" href="css\loginpagestyle.css">
+    </head>
+    <body>
+      
+      <div class="rows">
+        <div class="cols left">
+          <br><br><br><br><br><br><br><br>
+            <h1>
+                <u>
+                    <spam style="color:gray">Code</spam>
+                    <spam>Fun</spam>
+                </u>
+            </h1>
+            <br>
+            <span>Start login your account & play your game.</span>
+
+            <ul class="right-nav">
+              <li><a href="#" id="signin-btn" class="btn-right">Sign In</a></li>
+              <li><a href="#" id="signup-btn" class="btn-right">Sign Up</a></li>
+            </ul>
+            
+            <a href="./" class="close-ico"><img src="img\close.png" width="100%" alt="close"></a>
+        </div>
+        <div class="divider">
+
+        </div>
+        <div class="cols right">
+
+            <div id="signin">
+                  <img src="img\userico.png" alt="">
+                  <p class="title">Please Login Your Account</p>
+                  <form action="" method="get" name="signin">
+                    <input type="text" name="username" placeholder="EMAIL ID">
+                    <input type="password" name="userpass" placeholder="PASSWORD">
+                    <input type="submit" value="LOGIN" >
+                  </form>
+                    <p>or Sign Up Using</p>
+                    <div id="my-signin2"></div>
+                  
+            </div>
+            <div id="signup">
+              <br>
+                <p class="title1">Sign Up for a Free Membership</p><br>
+                <p class="title2">Create Your Account. <b>It's Free!</b></p>
+                <form action="" method="get" name="signup">
+                    <input type="text" name="username" placeholder="EMAIL ID">
+                    <input type="password" name="userpass" placeholder="PASSWORD">
+                    <input type="submit" value="Register Now!" >
+                </form>
+
+            </div>
+
+        </div>
+      </div>
+      
+
+
+      
+      
+      <script>
+         function onSuccess(googleUser) {
+          console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+        }
+        function onFailure(error) {
+          console.log(error);
+        }
+        function renderButton() {
+          gapi.signin2.render('my-signin2', {
+            'scope': 'profile email',
+            'width': 340,
+            'height': 50,
+            'longtitle': true,
+            'theme': 'dark',
+            'onsuccess': onSuccess,
+            'onfailure': onFailure
+          });
+        }
+      </script>
+  
+
+
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+<script>
+    $(document).ready(function () {
+        $('#signup').hide();
+        $('#signin-btn').addClass('active');
+
+        $('#signin-btn').click(function(){
+            $('#signup').hide();
+            $('#signin').show();
+            $('#signin-btn').addClass('active');
+            $('#signup-btn').removeClass('active');
+        });
+        $('#signup-btn').click(function(){
+            $('#signin').hide();
+            $('#signup').show();
+            $('#signup-btn').addClass('active');
+            $('#signin-btn').removeClass('active');
+        });
+    });
+</script>
+
+    </body>
+  </html>

@@ -1,75 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bootstrap 101 Template</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CodeFun</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
+</head>
 
-    <div class="home-banner">
-      
-         <h1><u><spam style="color:gray">Code</spam><spam>Fun</spam></u></h1><br>
-         <span>The most engaging game for learning programming.</span><br><br>
-         <a href="#" id="login-btn">GET STARTED</a>
-        
+<body>
+
+  <div class="home-banner">
+
+    <h1>
+      <u>
+        <spam style="color:gray">Code</spam>
+        <spam>Fun</spam>
+      </u>
+    </h1>
+    <br>
+    <span>The most engaging game for learning programming.</span>
+    <br>
+    <br>
+    <a href="#" id="login-btn">GET STARTED</a><br>
+    <a href="#slide1" class="scroll-down-ico "><img src="img\scroll-down.gif" width="60" alt=""></a>
+
+  </div>
+  <header>
+    <div class="nav">
+      <h1>
+        <spam style="color:gray">Code</spam>
+        <spam>Fun</spam>
+      </h1>
+      <ul class="nav-left">
+        <li>
+          <a href="#" style="background:rgb(71, 71, 71);color:rgb(219, 216, 216);">Home</a>
+        </li>
+        <li>
+          <a href="#">Course</a>
+        </li>
+        <li>
+          <a href="#">FAQ</a>
+        </li>
+      </ul>
+
+      <ul class="nav-right">
+        <li>
+          <a href="#slide1">Sign in</a>
+        </li>
+        <li>
+          <a href="#">Sign up</a>
+        </li>
+      </ul>
+      <div class="divider"></div>
     </div>
-       <header>
-            <div class="nav">
-              <h1><spam style="color:gray">Code</spam><spam>Fun</spam></h1>
-              <ul class="nav-left">
-                <li><a href="#" style="background:rgb(71, 71, 71);color:rgb(219, 216, 216);">Home</a></li>
-                <li><a href="#">Course</a></li>
-                <li><a href="#">FAQ</a></li>
-              </ul>
-              <ul class="nav-right">
-                <li><a href="#" >Sign in</a></li>
-                <li><a href="#">Sign up</a></li>
-              </ul>
-            </div>
-            <div class="divider"></div>
-        </header>
-
-        <div class="login-model">
-          <div class="model-bg"></div>
-          <div class="model-body">
-              <span class="close-model">X</span>
-          </div>   
-        </div>
-
-       <footer>
-          <div class="footer-manu">
-
-          </div>
-          <div class="footer-ext">
-            <span>Copyright ©2018 CodeFun. All Rights Reseved.</span>
-            <h1><spam style="color:gray">Code</spam><spam>Fun</spam></h1>
-            <span>Need Help? <a href="">team@codefun.com</a> and we'll get in touch!</span>
-          </div>
-       </footer>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function(){
-       $(".login-model").hide();
-       $("#login-btn").click(function(){
-           $(".login-model").show();
-       });
-       $(".close-model").click(function(){
-           $(".login-model").hide();
-       });
-      });
-       </script>
     
-  </body>
+  </header>
+
+  <div class="login-model">
+    <div class="model-bg"></div>
+    <div class="model-body">
+      <span class="close-model">X</span>
+    </div>
+  </div>
+
+ 
+<div class="row1">
+
+</div>
+
+
+
+
+
+
+
+  <footer>
+    <div class="footer-manu">
+
+    </div>
+    <div class="footer-ext">
+      <span>Copyright ©2018 CodeFun. All Rights Reseved.</span>
+      <h1>
+        <spam style="color:gray">Code</spam>
+        <spam>Fun</spam>
+      </h1>
+      <span>Need Help?
+        <a href="">team@codefun.com</a> and we'll get in touch!</span>
+    </div>
+  </footer>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+  <script>
+    $(document).ready(function () {
+      $(".login-model").hide();
+      $("#login-btn").click(function () {
+        $(".login-model").show();
+      });
+      $(".close-model").click(function () {
+        $(".login-model").hide();
+      });
+      // Add smooth scrolling to all links
+      $("a").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+
+    });
+  </script>
+
+</body>
+
 </html>
